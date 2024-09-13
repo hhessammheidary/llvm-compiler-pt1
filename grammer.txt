@@ -1,0 +1,10 @@
+Goal -> (Statement;)*
+Statement -> Define | Equ
+Define -> type int ID(, ID)*
+Equ -> ID = Expr
+Expr -> Term ((+|-) Term)*
+Term -> Factor ((*|/) Factor)*
+Factor -> ID | Number | (Expr)
+ID -> [a-zA-Z]+
+Number -> [0-9]+
+
